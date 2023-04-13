@@ -35,8 +35,8 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        $book = Products::create($request->all());
         try {
-            $book = Products::create($request->all());
         } catch (\Exception $e) {
             $res = [
                 'success' => false,
