@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('status_id')->unsigned()->default(1);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('user_id')->on('customers');
+            $table->foreign('customer_id')->references('user_id')->on('customers');
             $table->foreign('status_id')->references('status_id')->on('statuses');
         });
     }
